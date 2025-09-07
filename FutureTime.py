@@ -16,13 +16,19 @@ def main():
 
   #TODO:
   #Ask user for hours
+  hour = input("Enter hour: ")
+  hour2 = int(hour)
   #Ask user for minutes
-  moreMins = 500
+  minute = input("Enter minute: ")
+  minute2 = int(minute)
 
-  futureMins = (currentMinute + moreMins ) % 60
-  extraHour = (currentMinute + moreMins ) // 60
+  futurehour = (currentHour + hour2) % 24
 
-  print(extraHour)
+  futureMins = (currentMinute + minute2 ) % 60
+  extraHour = (currentMinute + minute2 ) // 60
+  possiblehour = (futurehour + extraHour) % 24
+
+  print(possiblehour)
 
   print(futureMins)
 
